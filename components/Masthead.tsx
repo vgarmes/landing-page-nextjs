@@ -27,7 +27,14 @@ const Masthead = () => {
           <span>Web development,</span> <span>the right way.</span>
         </h2>
       </div>
-      Masthead
+      <div className="flex-grow-0 pb-20 md:pb-10 transition-all duration-1000">
+        <Image
+          src="/assets/arrow-down.png"
+          width={188 / 3}
+          height={105 / 3}
+          alt="scroll down arrow"
+        />
+      </div>
     </div>
   );
 };
