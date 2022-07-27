@@ -1,4 +1,3 @@
-import { request } from 'http';
 import { useCallback, useRef, useEffect } from 'react';
 
 const useAnimationFrame = (enabled: boolean, callback: () => void) => {
