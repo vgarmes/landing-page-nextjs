@@ -4,7 +4,7 @@ import SliderContainer, { SliderItem } from './Slider';
 
 const ClientLogos = () => (
   <>
-    <SliderContainer className="" contentWidth={1290} initialOffsetX={0}>
+    <SliderContainer className="" initialOffsetX={0}>
       <SliderItem width={150}>
         <Image
           src="/assets/logos/shopify.png"
@@ -42,7 +42,7 @@ const ClientLogos = () => (
         />
       </SliderItem>
     </SliderContainer>
-    <SliderContainer className="" contentWidth={1290} initialOffsetX={0}>
+    <SliderContainer className="" initialOffsetX={0}>
       <SliderItem width={150}>
         <Image
           src="/assets/logos/shopify.png"

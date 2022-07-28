@@ -5,7 +5,7 @@ import useAnimationFrame from '../utils/use-animation-frame';
 interface Props {
   initialOffsetX: number;
   className: string;
-  contentWidth: number;
+
   children: React.ReactNode;
 }
 
@@ -13,13 +13,13 @@ const SliderContainer: React.FC<Props> = ({
   children,
   initialOffsetX,
   className,
-  contentWidth,
 }) => {
   const { innerWidth } = useContext(SizeContext);
   const refScrollX = useRef(initialOffsetX);
   const refContainer = useRef<HTMLDivElement>(null);
   const refContent = useRef<HTMLDivElement>(null);
 
+  const contentWidth = refContent?.current?.clientWidth || 0;
   const enabled = innerWidth < contentWidth;
 
   useAnimationFrame(
