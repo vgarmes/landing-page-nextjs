@@ -53,5 +53,8 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const commits = await getNumOfCommits();
+
+  // cache it for a day
+  res.setHeader('Cache-Control', 's-maxage=86400');
   res.status(200).json({ commits });
 }
