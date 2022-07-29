@@ -1,6 +1,5 @@
 import React from 'react';
 import ClientLogos from './ClientLogos';
-import Testimonials from './Testimonials';
 
 const TrustedBy = () => {
   return (
