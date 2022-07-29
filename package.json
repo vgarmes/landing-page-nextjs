@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "embla-carousel-autoplay": "^7.0.0-rc05",
     "embla-carousel-class-names": "^7.0.0-rc05",
     "embla-carousel-react": "^7.0.0-rc05",
