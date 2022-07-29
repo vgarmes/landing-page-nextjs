@@ -7,6 +7,7 @@ import Works from '../components/Works';
 import TrustedBy from '../components/TrustedBy';
 import ContactUs from '../components/ContactUs';
 import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       <TrustedBy />
       <Testimonials />
       <ContactUs />
+      <Footer />
     </div>
   );
 };
