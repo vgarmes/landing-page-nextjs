@@ -5,6 +5,8 @@ import About from '../components/About';
 import Skills from '../components/Skills';
 import Works from '../components/Works';
 import TrustedBy from '../components/TrustedBy';
+import ContactUs from '../components/ContactUs';
+import Testimonials from '../components/Testimonials';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +22,8 @@ const Home: NextPage = () => {
       <Skills />
       <Works />
       <TrustedBy />
+      <Testimonials />
+      <ContactUs />
     </div>
   );
 };
