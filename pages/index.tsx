@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
       <Masthead />
       <About />
-      <Skills commits={data?.commits} />
+      <Skills commits={data?.commits} downloads={data?.downloads} />
       <Works />
       <TrustedBy />
       <Testimonials />

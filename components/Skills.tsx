@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollContext } from '../utils/scroll-observer';
 
 interface Props {
+  downloads: number;
   commits: number;
 }
 
@@ -13,7 +14,7 @@ const opacityForBlock = (sectionProgress: number, blockNo: number) => {
   return 0.2;
 };
 
-const Skills: React.FC<Props> = ({ commits }) => {
+const Skills: React.FC<Props> = ({ commits, downloads }) => {
   const { scrollY } = React.useContext(ScrollContext);
   const refContainer = React.useRef<HTMLDivElement>(null);
 
@@ -32,6 +33,8 @@ const Skills: React.FC<Props> = ({ commits }) => {
     progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages));
   }
 
+  const numOfDownloads =
+    Math.round((downloads || 0) / 1e6).toLocaleString() + 'M';
   const numOfCommits = Math.round(commits || fallbackCommits).toLocaleString();
 
   return (
@@ -42,14 +45,14 @@ const Skills: React.FC<Props> = ({ commits }) => {
             className="transition-opacity duration-500"
             style={{ opacity: opacityForBlock(progress, 0) }}
           >
-            This repo consists of {numOfCommits} commits
+            This repo consists of {numOfCommits} commits.
           </span>
           <span
             className="transition-opacity duration-500 inline-block after:content-['_']"
             style={{ opacity: opacityForBlock(progress, 1) }}
           >
-            Gluten-free hashtag iPhone salvia squid austin chicharrones
-            williamsburg kale.
+            React has had a total of {numOfDownloads} downloads from npm during
+            last year!
           </span>
           <span
             className="transition-opacity duration-500 inline-block"
